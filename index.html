@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="./img/slogo.png" type="image/x-icon">
+
+  <title>Quiz 谜链星云</title>
+
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/mscc-0.3.6.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script charset="utf-8" src="chrome-extension://jgphnjokjhjlcnnajmfjlacjnjkhleah/js/btype.js"></script><style class="AC-Style-bkWMgd">#center_col{width:1519px !important;margin-left: unset !important;margin-right: unset !important;}#center_col>*{padding-left:8%;padding-right:8%;}</style>
+    <script src="./js/jquery.min.js"></script> 
+    <script src="./js/bootstrap.min.js"></script> 
+    <script src="./js/index.js"></script> 
+	<script src="./js/nebPay.js"></script> 
+ </head>
+
+<body class="home win">
+  <!-- EU Cookie Compliance JS -->
+  <script src="./js/mscc-0.3.6.min.js"></script>
+
+  <div id="main" itemscope="" itemtype="http://schema.org/SoftwareApplication">
+          <div class="navbar-fixed-container">
+          	<div class="navbar navbar-inverse navbar-fixed-top affix-top" data-spy="affix" data-offset-top="1">
+          	    <nav role="navigation">
+          	        <div class="container">
+          	            <div class="nav navbar-header">
+
+          	                <a class="navbar-brand" href="https://allQuiz.github.io/"><span>Quiz</span></a>
+          	            </div>
+          	            <div class="navbar-collapse collapse">
+          	                <ul class="nav navbar-nav navbar-left">
+          	                    <li><a id="nav-docs" href="https://nebulas.io/">星云链驱动</a></li>
+          	                    <li><a id="nav-updates" href="https://incentive.nebulas.io/signup.html?invite=MKFEN">开发者入驻</a></li>
+          	                    <li><a id="nav-blogs" href="https://nebulas.io/cn">星云链中文网</a></li>
+          	                    <li><a id="nav-community" href="https://nebulas.io/cn/incentive.html">激励计划</a></li>
+          	                </ul>
+          	
+          	                <ul class="nav navbar-nav navbar-right">
+          	                    <!-- this was hiden in the home and download page, keeping it for now -->
+          	                    <li><a itemprop="downloadUrl" class="link-button" href="https://github.com/ChengOrangeJu/WebExtensionWallet" id="nav-download">
+          							<img class="download-icon" src="./img/download.svg" width="16px" height="16px" alt="下载浏览器插件钱包">
+          							<img class="download-icon-inverted" src="./img/download-black.svg" width="16px" height="16px" alt="下载浏览器插件钱包">
+          						<span class="hidden-sm">浏览器插件钱包</span></a></li>
+          	                </ul>
+          	            </div>
+          	        </div>
+          	    </nav>
+          	</div>
+          </div>
+		  <!--<div class="updates-banner home ">
+              <div class="container">
+                  <p class="message"><a href="https://code.visualstudio.com/updates" id="banner-link-updates">版本<span itemprop="softwareVersion">1.1</span></a> 已经更新！网站进行了优化</p>
+              </div>
+          </div>-->
+		  <div role="main" id="main-content">
+        <div class="jumbotron home">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 copy" href="https://github.com/ChengOrangeJu/WebExtensionWallet">
+                <h1><strong>Quiz 谜链</strong>基于星云链制作</h1>
+                <div class="lead">
+                    <p>向全网发布谜题,等待全球有志之士的解答.</p>
+                </div>
+
+                <div id="download-buttons" class="download-hero alt-downloads win" href="https://github.com/ChengOrangeJu/WebExtensionWallet">
+                    <!-- Download for user's current OS -->
+                    <div class="primary-buttons" href="https://github.com/ChengOrangeJu/WebExtensionWallet">
+                        <button class="link-button" href="https://github.com/ChengOrangeJu/WebExtensionWallet">Plugin for Chrome<small class="build-type">右上角↗浏览器插件钱包</small>
+						</button>
+                    </div>
+                </div>            
+			</div>
+            <div class="col-md-8">
+                <div><img src="./img/wal.png" href="https://github.com/ChengOrangeJu/WebExtensionWallet" style="max-width:320px;margin-top:30px" alt="浏览器插件钱包"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="value-props">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3 col-xs-6"><a class="value-prop" id="allQuiz" href="javascript:void(0)">All Quiz-全部谜题</a></div>
+            <div class="col-sm-3 col-xs-6"><a class="value-prop" id="myQuiz" href="javascript:void(0)">My Quiz-我的谜题</a></div>
+            <div class="col-sm-3 col-xs-6"><a class="value-prop" id="newQuiz" href="javascript:void(0)">New Quiz-提交谜题</a></div>
+            <div class="col-sm-3 col-xs-6"><a class="value-prop" id="help-link" href="#help">Help-帮助</a></div>
+        </div>
+    </div>
+</div>
+
+<!-- Swimlanes -->
+<div class="swimlane-container">
+        <div class="swimlane social-proof">
+            <div class="container">
+            <div class="row">
+                <div class="col-sm-1">
+                </div>
+				<div class="col-sm-10">
+					<div class="post-content">
+					<div>
+								<div class="panel panel-success">
+									<div class="panel-heading">
+										<h3 class="panel-title" id="detailTitle">
+										All Quiz-全部Quiz
+										</h3>
+									</div>
+									<div id="searchresult" style="min-height:450px; height:auto!important">
+										<div class="panel-body">
+									加载中...若加载时间过长请检查网络
+										</div>
+									</div>
+								</div>
+					</div> 
+					</div>
+				<div class="col-sm-1">
+                </div>
+				</div>
+			</div>
+            </div>
+        </div>
+</div>
+    <div id="help" class="swimlane">
+        <div class="container">
+            <div class="row">
+				<div class="col-sm-5">
+                </div>
+                <div class="col-sm-7 col-sm-pull-4">
+                    <h2>Help-帮助</h2>
+                    <p>我怎么创建钱包？</p>
+					<a href="https://github.com/ChengOrangeJu/WebExtensionWallet" title="插件">使用Chrome内核浏览器安装此插件即可</a>
+                    <p>我钱包里一点NAS都没有连GAS费都不够怎么办？</p>
+					<a href="http://Quiz.gpu360.com/watertap" title="无需手续费领取NAS">输入钱包地址即可领取NAS</a>
+					<p>我还想多领一点以便开发怎么办？</p>
+					<a href="https://nas.biyouduo.com/" title="领取0.0001NAS">领取更多NAS</a>
+					<p>作为开发者，开发Quiz有没有更多奖励？</p>
+					<a href="https://incentive.nebulas.io/cn/signup.html?invite=mPHt9" title="开发者领取130NAS" target="_blank">开发者领取130NAS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+      </div>
+  </div>
+
+  <footer role="contentinfo">
+      <div class="container">
+          <div class="row">
+              <div class="left col-md-7">
+                  <ul class="links">
+                      <li>
+                          <span class="message">Quiz 谜链星云</span>
+                      </li>
+                  </ul>
+              </div>
+              <div class="right col-md-5">
+                  <div class="copyright">
+                      <a class="logo">Quiz</a>
+                      <span>© 2018 <span itemprop="publisher" itemscope="" itemtype="https://alldapp.github.io/Quiz">
+  <span itemprop="name">Quiz</span></span>
+                      </span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+  
+<style class="adsEnable">#content_right td>div:not([id]){display:none;}</style><style class="NoLine">a{text-decoration:none}</style><style class="AC-special-BAIDU">.opr-recommends-merge-imgtext{display:none!important;}.res_top_banner{display:none!important;}.headBlock{display:none;}</style><style class="ac-MENU">#sp-ac-container{z-index:999999!important;text-align:left!important;background-color:white;}#sp-ac-container *{font-size:13px!important;color:black!important;float:none!important;}#sp-ac-main-head{position:relative!important;top:0!important;left:0!important;}#sp-ac-span-info{position:absolute!important;right:1px!important;top:0!important;font-size:10px!important;line-height:10px!important;background:none!important;font-style:italic!important;color:#5a5a5a!important;text-shadow:white 0px 1px 1px!important;}#sp-ac-container input{vertical-align:middle!important;display:inline-block!important;outline:none!important;height:auto !important;padding:0px !important;margin-bottom:0px !important;margin-top: 0px !important;}#sp-ac-container input[type="number"]{width:50px!important;text-align:left!important;}#sp-ac-container input[type="checkbox"]{border:1px solid #B4B4B4!important;padding:1px!important;margin:3px!important;width:13px!important;height:13px!important;background:none!important;cursor:pointer!important;visibility:visible !important;position:static !important;}#sp-ac-container input[type="button"]{border:1px solid #ccc!important;cursor:pointer!important;background:none!important;width:auto!important;height:auto!important;}#sp-ac-container li{list-style:none!important;margin:3px 0!important;border:none!important;float:none!important;}#sp-ac-container fieldset{border:2px groove #ccc!important;-moz-border-radius:3px!important;border-radius:3px!important;padding:4px 9px 6px 9px!important;margin:2px!important;display:block!important;width:auto!important;height:auto!important;}#sp-ac-container legend{line-height:20px !important;margin-bottom:0px !important;}#sp-ac-container fieldset>ul{padding:0!important;margin:0!important;}#sp-ac-container ul#sp-ac-a_useiframe-extend{padding-left:40px!important;}#sp-ac-rect{position:relative!important;top:0!important;left:0!important;float:right!important;height:10px!important;width:10px!important;padding:0!important;margin:0!important;-moz-border-radius:3px!important;border-radius:3px!important;border:1px solid white!important;-webkit-box-shadow:inset 0 5px 0 rgba(255,255,255,0.3),0 0 3px rgba(0,0,0,0.8)!important;-moz-box-shadow:inset 0 5px 0 rgba(255,255,255,0.3),0 0 3px rgba(0,0,0,0.8)!important;box-shadow:inset 0 5px 0 rgba(255,255,255,0.3),0 0 3px rgba(0,0,0,0.8)!important;opacity:0.8!important;}#sp-ac-dot,#sp-ac-cur-mode{position:absolute!important;z-index:9999!important;width:5px!important;height:5px!important;padding:0!important;-moz-border-radius:3px!important;border-radius:3px!important;border:1px solid white!important;opacity:1!important;-webkit-box-shadow:inset 0 -2px 1px rgba(0,0,0,0.3),inset 0 2px 1px rgba(255,255,255,0.3),0px 1px 2px rgba(0,0,0,0.9)!important;-moz-box-shadow:inset 0 -2px 1px rgba(0,0,0,0.3),inset 0 2px 1px rgba(255,255,255,0.3),0px 1px 2px rgba(0,0,0,0.9)!important;box-shadow:inset 0 -2px 1px rgba(0,0,0,0.3),inset 0 2px 1px rgba(255,255,255,0.3),0px 1px 2px rgba(0,0,0,0.9)!important;}#sp-ac-dot{right:-3px!important;top:-3px!important;}#sp-ac-cur-mode{left:-3px!important;top:-3px!important;width:6px!important;height:6px!important;}#sp-ac-content{padding:0!important;margin:5px 5px 0 0!important;-moz-border-radius:3px!important;border-radius:3px!important;border:1px solid #A0A0A0!important;-webkit-box-shadow:-2px 2px 5px rgba(0,0,0,0.3)!important;-moz-box-shadow:-2px 2px 5px rgba(0,0,0,0.3)!important;box-shadow:-2px 2px 5px rgba(0,0,0,0.3)!important;}#sp-ac-main{padding:5px!important;border:1px solid white!important;-moz-border-radius:3px!important;border-radius:3px!important;background-color:#F2F2F7!important;background:-moz-linear-gradient(top,#FCFCFC,#F2F2F7 100%)!important;background:-webkit-gradient(linear,0 0,0 100%,from(#FCFCFC),to(#F2F2F7))!important;}#sp-ac-foot{position:relative!important;left:0!important;right:0!important;min-height:20px!important;}#sp-ac-savebutton{position:absolute!important;top:0!important;right:2px!important;}#sp-ac-container .sp-ac-spanbutton{border:1px solid #ccc!important;-moz-border-radius:3px!important;border-radius:3px!important;padding:2px 3px!important;cursor:pointer!important;background-color:#F9F9F9!important;-webkit-box-shadow:inset 0 10px 5px white!important;-moz-box-shadow:inset 0 10px 5px white!important;box-shadow:inset 0 10px 5px white!important;}label[class="newFunc"]{color:blue !important;}</style><div id="sel-ext-win" class="sel-text-win" style="display: none;"></div></body></html>
