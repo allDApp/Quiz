@@ -151,9 +151,9 @@ function addMyQuiz(index){
 				console.log("response of push: " + JSON.stringify(resp))
 				var respString = JSON.stringify(resp);
 				if(respString.search("rejected by user") !== -1){
-					alert("关闭交易,取消上传谜题")
+					alert("取消交易")
 				}else if(respString.search("txhash") !== -1){
-					alert("上传Hash: " + resp.txhash+"请等待交易确认,如果上传失败请检查内容是否含有特殊字符")
+					alert("上传Hash: " + resp.txhash+"请等待交易确认")
 				}
 			}
 		});
